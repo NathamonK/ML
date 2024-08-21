@@ -51,4 +51,13 @@ if classifier =="RF":
   y_pred = rf.predict(x_test)
   acc = accuracy_score(y_test, y_pred)
   st.write(acc)
+
+
+import numpy as np
+
+x = np.random.rand(100)
+y = 2 * x + 1 + 0.2*np.random.randn(100)
+
+plt.scatter(x, y)
+plt
   
