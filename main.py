@@ -15,8 +15,6 @@ df
 x = df.iloc[:, :-1]
 y = df['species']
 
-plt.scatter(x, y)
-plt
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 knn = KNeighborsClassifier(n_neighbors=3)
