@@ -20,7 +20,7 @@ knn.fit(x_train, y_train)
 
 st.sidebar.title('Classifier')
 classifier = st.sidebar.selectbox('Select Classifier', ('KNN', 'SVM', 'DT', 'NN', 'RF'))
-k = st.sidebar.slider('K', 1, 20, 3)
+k = st.sidebar.slider('K', 1, 120, 3)
 if classifier =="KNN":
   knn = KNeighborsClassifier(n_neighbors=k)
   knn.fit(x_train, y_train)
