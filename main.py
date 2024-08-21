@@ -8,7 +8,7 @@ from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.neighbors import KNeighborsRegressor
+
 df = sns.load_dataset('iris')
 df
 
@@ -28,12 +28,6 @@ if classifier =="KNN":
   y_pred = knn.predict(x_test)
   acc = accuracy_score(y_test, y_pred)
   st.write(acc)
-  knn = KNeighborsRegressor(n_neighbors=5)
-  knn.fit(x.reshape(-1, 1), y)
-  y_pred = knn.predict(x.reshape(-1, 1))
-  plt.scatter(x, y)
-  plt.scatter(x, y_pred)
-  plt.show()
 if classifier =="SVM":
   svm = SVC()
   svm.fit(x_train, y_train)
